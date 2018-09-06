@@ -1,0 +1,32 @@
+{
+  "name": "sfn-validate-decorator",
+  "version": "0.1.0",
+  "description": "A decorator function for SFN controllers to validate inputs.",
+  "main": "dist/index",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyurl/sfn-validate-decorator.git"
+  },
+  "keywords": [
+    "sfn",
+    "validate",
+    "decorator"
+  ],
+  "author": "Ayon Lee <i@hyurl.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hyurl/sfn-validate-decorator/issues"
+  },
+  "homepage": "https://github.com/hyurl/sfn-validate-decorator#readme",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "sfn-validator": "^0.1.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "sfn": "^0.2.1"
+  }
+}
