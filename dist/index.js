@@ -1,16 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const sfn_1 = require("sfn");
-const Validator = require("sfn-validator");
 const get = require("lodash/get");
-/**
- *
- * @param target The object name you wanna test, e.g. `req.body`.
- * @param rule
- */
 function validate(target, rule) {
     return sfn_1.before((ctrl) => {
-        rule = rule instanceof Validator ? rule : new Validator(rule);
+        rule = rule instanceof sfn_1.Validator ? rule : new sfn_1.Validator(rule);
         try {
             rule.validate(get(ctrl, target));
         }

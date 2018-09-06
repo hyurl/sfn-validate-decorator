@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A decorator function for SFN controllers to validate inputs.",
   "main": "dist/index",
+  "types": "src/index.ts",
   "scripts": {
     "test": "test.js"
   },
@@ -22,11 +23,9 @@
   },
   "homepage": "https://github.com/hyurl/sfn-validate-decorator#readme",
   "dependencies": {
-    "lodash": "^4.17.10",
-    "sfn-validator": "^0.1.4"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.116",
-    "sfn": "^0.2.1"
+    "@types/lodash": "^4.14.116"
   }
 }
