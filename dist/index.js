@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sfn_1 = require("sfn");
 const get = require("lodash/get");
 function validate(target, rule) {
-    return sfn_1.before((ctrl) => {
+    return sfn_1.before(function () {
         rule = rule instanceof sfn_1.Validator ? rule : new sfn_1.Validator(rule);
         try {
-            rule.validate(get(ctrl, target));
+            rule.validate(get(this, target));
         }
         catch (err) {
             throw new sfn_1.HttpError(400, err.message);

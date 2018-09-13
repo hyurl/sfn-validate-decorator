@@ -7,11 +7,11 @@ export function validate(
         [field: string]: Validator.ValidTypes | Validator.Rule
     }
 ): HttpDecorator {
-    return before((ctrl: HttpController) => {
+    return before<HttpController>(function () {
         rule = rule instanceof Validator ? rule : new Validator(rule);
 
         try {
-            rule.validate(get(ctrl, target));
+            rule.validate(get(this, target));
         } catch (err) {
             throw new HttpError(400, (<Error>err).message);
         }
